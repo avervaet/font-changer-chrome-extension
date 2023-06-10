@@ -111,4 +111,5 @@ function extractImagesAndReplace() {
 let storedFont = localStorage.getItem("global_font");
 if (storedFont) {
     changeFont(storedFont);
+    extractImagesAndReplace();
 }
