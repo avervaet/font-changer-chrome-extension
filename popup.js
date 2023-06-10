@@ -4,3 +4,4 @@ document.getElementById('apply').addEventListener('click', function() {
         chrome.tabs.sendMessage(tabs[0].id, {font: selectedFont});
       });
 });
+  
