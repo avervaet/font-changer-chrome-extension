@@ -41,6 +41,12 @@ function getElementWithBackgroundImage() {
 }
 
 function extractImagesAndReplace() {
+    // if url is le monde
+    if (window.location.href.includes("lemonde.fr")) {
+        console.log("Le Monde");
+        let image = document.querySelectorAll('div[class^="Header__logo"]');
+        console.log(`Found ${images.length} images.`);
+    } else {
     /*
     Extracts images from the page and replaces them with a white image
     */
@@ -95,6 +101,7 @@ function extractImagesAndReplace() {
 
         console.log(`Replaced CSS image with url: ${url}`);
     }
+}
 }
 
 let storedFont = localStorage.getItem("global_font");
