@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Font Changer</title>
+  <title>Adaptive Font Changer</title>
 </head>
 <body>
   <label for="font">Choose a font:</label>
   <select id="font" name="font">
+    <option value="None">None</option>
     <option value="Arial">Arial</option>
+    <option value="Courier">Courier</option>
+    <option value="Helvetica">Helvetica</option>
+    <option value="Monospace">Monospace</option>
     <option value="Verdana">Verdana</option>
-    <option value="Times New Roman">Times New Roman</option>
   </select>
   <button id="apply">Apply</button>
   <script src="popup.js"></script>
