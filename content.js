@@ -50,6 +50,20 @@ function extractImagesAndReplace() {
         let image = document.querySelector('img[class^="mx-auto"]');
         let font_lower = localStorage.getItem("global_font").toLowerCase();
         image.src = `https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/hexagone_${font_lower}.png`;
+    } else if (window.location.href.includes("google")) {
+        let font_lower = localStorage.getItem("global_font").toLowerCase();
+        try {
+            let image = document.querySelector('img[class^="jfN4p"]');
+            image.srcset = `https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/google_${font_lower}.png`;
+            image.src = `https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/google_${font_lower}.png`;
+        } catch (error) {
+        }
+        try {
+            let image2 = document.querySelector('img[class^="lnXdpd"]');
+            image2.srcset = `https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/google_${font_lower}.png`;
+            image2.src = `https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/google_${font_lower}.png`;
+        } catch (error) {
+        }
     } else {
         /*
         Extracts images from the page and replaces them with a white image
