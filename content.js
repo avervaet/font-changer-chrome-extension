@@ -43,10 +43,13 @@ function getElementWithBackgroundImage() {
 function extractImagesAndReplace() {
     // if url is le monde
     if (window.location.href.includes("lemonde.fr")) {
-        console.log("Le Monde");
         let image = document.querySelector('div[class^="Header__logo"]');
         let font_lower = localStorage.getItem("global_font").toLowerCase();
         image.innerHTML = `<img src='https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/Le_monde_${font_lower}.png'>`;
+    } else if (window.location.href.includes("ecole-hexagone.com")) {
+        let image = document.querySelector('img[class^="mx-auto"]');
+        let font_lower = localStorage.getItem("global_font").toLowerCase();
+        image.src = `https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/hexagone_${font_lower}.png`;
     } else {
         /*
         Extracts images from the page and replaces them with a white image
@@ -74,7 +77,7 @@ function extractImagesAndReplace() {
             image.width = width;
             image.height = height;
 
-            console.log(`Replaced image with src: ${src}`);
+            // console.log(`Replaced image with src: ${src}`);
         }
 
         // SVG images located in CSS (to replace with normal images)
@@ -100,7 +103,7 @@ function extractImagesAndReplace() {
             cssImage.width = width;
             cssImage.height = height;
 
-            console.log(`Replaced CSS image with url: ${url}`);
+            // console.log(`Replaced CSS image with url: ${url}`);
         }
     }
 }
