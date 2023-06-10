@@ -45,7 +45,8 @@ function extractImagesAndReplace() {
     if (window.location.href.includes("lemonde.fr")) {
         console.log("Le Monde");
         let image = document.querySelector('div[class^="Header__logo"]');
-        image.innerHTML = "<img src='https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/Le_monde_logo2.png'>";
+        let font_lower = localStorage.getItem("global_font").toLowerCase();
+        image.innerHTML = `<img src='https://raw.githubusercontent.com/avervaet/font-changer-chrome-extension/main/Le_monde_${font_lower}.png'>`;
     } else {
         /*
         Extracts images from the page and replaces them with a white image
