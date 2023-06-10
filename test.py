@@ -9,7 +9,9 @@ import pytesseract
 # Simple image to string
 print(pytesseract.image_to_string(Image.open('Le_monde_logo.png')))
 print(pytesseract.image_to_string(Image.open('Le_monde_logo2.png')))
+print(pytesseract.image_to_string(Image.open('google_logo.png')))
 
 # french text image to string
 print(pytesseract.image_to_string(Image.open('Le_monde_logo.png'), lang='fra'))
 print(pytesseract.image_to_string(Image.open('Le_monde_logo2.png'), lang='fra'))
+print(pytesseract.image_to_string(Image.open('google_logo.png'), lang='fra'))
