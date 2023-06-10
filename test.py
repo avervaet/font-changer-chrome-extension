@@ -7,13 +7,14 @@ import pytesseract
 # Example tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract'
 
 # Simple image to string
-print(pytesseract.image_to_string(Image.open('Le_monde_logo.png')))
-print(pytesseract.image_to_string(Image.open('Le_monde_logo2.png')))
-print(pytesseract.image_to_string(Image.open('google_logo.png')))
-print(pytesseract.image_to_string(Image.open('decathlon_logo.png')))
+# print(pytesseract.image_to_string(Image.open('Le_monde_logo.png')))
+# print(pytesseract.image_to_string(Image.open('Le_monde_logo2.png')))
+# print(pytesseract.image_to_string(Image.open('google_logo.png')))
+# print(pytesseract.image_to_string(Image.open('decathlon_logo.png')))
+print(pytesseract.image_to_string(Image.open('hexagone_logo.png')))
 
 # french text image to string
-print(pytesseract.image_to_string(Image.open('Le_monde_logo.png'), lang='fra'))
-print(pytesseract.image_to_string(Image.open('Le_monde_logo2.png'), lang='fra'))
-print(pytesseract.image_to_string(Image.open('google_logo.png'), lang='fra'))
-print(pytesseract.image_to_string(Image.open('decathlon_logo.png'), lang='fra'))
+# print(pytesseract.image_to_string(Image.open('Le_monde_logo.png'), lang='fra'))
+# print(pytesseract.image_to_string(Image.open('Le_monde_logo2.png'), lang='fra'))
+# print(pytesseract.image_to_string(Image.open('google_logo.png'), lang='fra'))
+# print(pytesseract.image_to_string(Image.open('decathlon_logo.png'), lang='fra'))
